@@ -1,0 +1,7 @@
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+  <Body>
+    <getCountryRequest xmlns="http://alekseysamoylov.com/countries">
+      <name>Poland</name>
+    </getCountryRequest>
+  </Body>
+</Envelope>

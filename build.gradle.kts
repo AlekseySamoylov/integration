@@ -12,6 +12,7 @@ plugins {
 }
 
 allOpen {
+  annotation("org.springframework.ws.server.endpoint.annotation.Endpoint")
   annotation("javax.persistence.Entity")
   annotation("javax.persistence.Embeddable")
   annotation("javax.persistence.MappedSuperclass")
@@ -30,12 +31,18 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-mustache")
   implementation("org.springframework.boot:spring-boot-starter-web")
   implementation("org.springframework.boot:spring-boot-starter-web-services")
+
   implementation("io.springfox:springfox-swagger2:2.9.2")
   implementation("io.springfox:springfox-swagger-ui:2.9.2")
+
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("org.jetbrains.kotlin:kotlin-reflect")
   implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+  implementation("wsdl4j:wsdl4j:1.6.3")
+
   runtimeOnly("com.h2database:h2:1.4.199")
+
   runtimeOnly("org.springframework.boot:spring-boot-devtools")
   testImplementation("org.springframework.boot:spring-boot-starter-test") {
     exclude(module = "junit")
@@ -44,10 +51,9 @@ dependencies {
   testImplementation("org.junit.jupiter:junit-jupiter-api")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
   testImplementation("com.ninja-squad:springmockk:1.1.2")
+
   kapt("org.springframework.boot:spring-boot-configuration-processor")
 }
-
-
 
 tasks.withType<KotlinCompile> {
   kotlinOptions {
@@ -59,3 +65,4 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
   useJUnitPlatform()
 }
+
