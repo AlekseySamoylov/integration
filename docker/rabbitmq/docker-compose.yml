@@ -1,0 +1,17 @@
+version: "2"
+services:
+  rabbit:
+    hostname: rabbit1
+    image: "rabbitmq:3-management"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    tty: true
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    volumes:
+      - ./rabbit1:/var/lib/rabbitmq
+      - ./conf/:/etc/rabbitmq/

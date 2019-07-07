@@ -1,0 +1,11 @@
+version: '3'
+services:
+  postgres:
+    image: library/postgres:9.6.8
+    volumes:
+    - ./init_db.sql:/docker-entrypoint-initdb.d/1-init.sql
+    ports:
+    - "15432:5432"
+    environment:
+    - DB_USER=dbuser
+    - DB_PASS=secret
