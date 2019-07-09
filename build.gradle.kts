@@ -32,6 +32,8 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-web")
   implementation("org.springframework.boot:spring-boot-starter-web-services")
 
+  implementation("org.springframework.cloud:spring-cloud-starter-netflix-hystrix")
+
   implementation("io.springfox:springfox-swagger2:2.9.2")
   implementation("io.springfox:springfox-swagger-ui:2.9.2")
 
@@ -53,6 +55,12 @@ dependencies {
   testImplementation("com.ninja-squad:springmockk:1.1.2")
 
   kapt("org.springframework.boot:spring-boot-configuration-processor")
+}
+
+dependencyManagement {
+  imports {
+    mavenBom("org.springframework.cloud:spring-cloud-dependencies:Finchley.SR2")
+  }
 }
 
 tasks.withType<KotlinCompile> {

@@ -7,3 +7,5 @@
 <p>Install the Chrome plugin Wizdler</p>
 <p>OR</p>
 <p>Execute in the directory: src/test/resources: curl der "content-type: text/xml" -d @request.xml http://localhost:8080/ws</p>
+
+<h2>Histrix Circuit Breaker & Feign client</h2>
