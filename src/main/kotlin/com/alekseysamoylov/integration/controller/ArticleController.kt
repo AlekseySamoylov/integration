@@ -16,7 +16,7 @@ class ArticleController(private val repository: ArticleRepository) {
 
   @GetMapping
   @HystrixCommand(fallbackMethod = "fallbackFindAll", commandProperties = [
-    HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")
+    HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000")
   ])
   fun findAll(): List<Article> {
     Thread.sleep(3000)
