@@ -24,6 +24,9 @@ java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
   mavenCentral()
+  maven {
+    url = uri("http://repo.spring.io/milestone")
+  }
 }
 
 dependencies {
@@ -31,6 +34,7 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-mustache")
   implementation("org.springframework.boot:spring-boot-starter-web")
   implementation("org.springframework.boot:spring-boot-starter-web-services")
+  implementation("org.springframework.boot:spring-boot-starter-amqp")
 
   implementation("org.springframework.cloud:spring-cloud-starter-netflix-hystrix")
 
@@ -59,7 +63,7 @@ dependencies {
 
 dependencyManagement {
   imports {
-    mavenBom("org.springframework.cloud:spring-cloud-dependencies:Finchley.SR2")
+    mavenBom("org.springframework.cloud:spring-cloud-dependencies:Greenwich.RC2")
   }
 }
 

@@ -1,0 +1,62 @@
+{
+  "exchanges": [
+    {
+      "name": "user-exchange",
+      "vhost": "/",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    }
+  ],
+  "queues": [
+    {
+      "name": "user",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    },
+    {
+      "name": "user-error",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    },
+    {
+      "name": "user-important",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    }
+  ],
+  "bindings": [
+    {
+      "source": "user-exchange",
+      "vhost": "/",
+      "destination": "user",
+      "destination_type": "queue",
+      "routing_key": "*",
+      "arguments": {}
+    },
+    {
+      "source": "user-exchange",
+      "vhost": "/",
+      "destination": "user-important",
+      "destination_type": "queue",
+      "routing_key": "user.important.*",
+      "arguments": {}
+    },
+    {
+      "source": "user-exchange",
+      "vhost": "/",
+      "destination": "user-error",
+      "destination_type": "queue",
+      "routing_key": "user.error.*",
+      "arguments": {}
+    }
+  ]
+}

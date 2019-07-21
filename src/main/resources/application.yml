@@ -1,0 +1,11 @@
+blog:
+  title: Integration App
+  banner:
+    title: Warning
+    content: The blog will be down tomorrow.
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: rabbitmq
+    password: rabbitmq
