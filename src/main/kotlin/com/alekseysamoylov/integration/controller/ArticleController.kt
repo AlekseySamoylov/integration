@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("$BASE_URI/article")
+@RequestMapping("$API_URI/article")
 class ArticleController(private val repository: ArticleRepository) {
 
   @GetMapping

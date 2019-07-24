@@ -9,3 +9,9 @@
 <p>Execute in the directory: src/test/resources: curl der "content-type: text/xml" -d @request.xml http://localhost:8080/ws</p>
 
 <h2>Histrix Circuit Breaker & Feign client</h2>
+
+<h2>RabbitMQ message broker</h2>
+
+<h2>Protocol Buffers</h2>
+<p>Install protoc (Mac OS): brew install protobuf</p>
+<p>run in main directory: protoc --java_out=java resources/study.proto</p>

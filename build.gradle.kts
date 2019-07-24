@@ -1,7 +1,17 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    "classpath"(group = "com.google.protobuf", name = "protobuf-gradle-plugin", version = "0.8.8")
+  }
+}
+
 plugins {
   kotlin("plugin.jpa") version "1.2.71"
+  id("com.google.protobuf") version "0.8.8"
   id("org.springframework.boot") version "2.1.6.RELEASE"
   id("io.spring.dependency-management") version "1.0.7.RELEASE"
   kotlin("jvm") version "1.2.71"
@@ -29,6 +39,14 @@ repositories {
   }
 }
 
+sourceSets {
+  main {
+    java {
+      setSrcDirs(listOf("src/main/java","build/generated/source/proto/main/java"))
+    }
+  }
+}
+
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-data-jpa")
   implementation("org.springframework.boot:spring-boot-starter-mustache")
@@ -46,6 +64,8 @@ dependencies {
   implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
   implementation("wsdl4j:wsdl4j:1.6.3")
+
+  implementation("com.google.protobuf:protobuf-java:3.6.1")
 
   runtimeOnly("com.h2database:h2:1.4.199")
 
@@ -72,9 +92,14 @@ tasks.withType<KotlinCompile> {
     freeCompilerArgs = listOf("-Xjsr305=strict")
     jvmTarget = "1.8"
   }
+  dependsOn("generateProto")
 }
 
 tasks.withType<Test> {
   useJUnitPlatform()
 }
 
+tasks.withType<Wrapper> {
+  distributionType = Wrapper.DistributionType.ALL
+  gradleVersion = "5.5"
+}
