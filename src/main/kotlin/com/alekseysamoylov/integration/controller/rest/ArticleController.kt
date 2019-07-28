@@ -1,8 +1,9 @@
-package com.alekseysamoylov.integration.controller
+package com.alekseysamoylov.integration.controller.rest
 
-import com.alekseysamoylov.integration.Article
-import com.alekseysamoylov.integration.ArticleRepository
-import com.alekseysamoylov.integration.User
+import com.alekseysamoylov.integration.controller.API_URI
+import com.alekseysamoylov.integration.rest.Article
+import com.alekseysamoylov.integration.rest.ArticleRepository
+import com.alekseysamoylov.integration.rest.User
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty
 import org.springframework.web.bind.annotation.GetMapping

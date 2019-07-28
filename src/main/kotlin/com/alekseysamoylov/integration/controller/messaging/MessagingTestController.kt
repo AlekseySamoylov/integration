@@ -1,5 +1,6 @@
-package com.alekseysamoylov.integration.controller
+package com.alekseysamoylov.integration.controller.messaging
 
+import com.alekseysamoylov.integration.controller.API_URI
 import com.alekseysamoylov.integration.messaging.BroadcastMessageProducer
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping

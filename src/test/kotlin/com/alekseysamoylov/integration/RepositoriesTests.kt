@@ -1,5 +1,9 @@
 package com.alekseysamoylov.integration
 
+import com.alekseysamoylov.integration.rest.Article
+import com.alekseysamoylov.integration.rest.ArticleRepository
+import com.alekseysamoylov.integration.rest.User
+import com.alekseysamoylov.integration.rest.UserRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired

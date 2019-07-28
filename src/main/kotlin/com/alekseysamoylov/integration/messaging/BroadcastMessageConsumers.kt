@@ -1,7 +1,5 @@
 package com.alekseysamoylov.integration.messaging
 
-import com.alekseysamoylov.integration.config.QUEUE_NAME_ERROR
-import com.alekseysamoylov.integration.config.QUEUE_NAME_IMPORTANT
 import org.springframework.amqp.rabbit.annotation.RabbitListener
 import org.springframework.stereotype.Component
 

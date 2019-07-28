@@ -1,4 +1,4 @@
-package com.alekseysamoylov.integration.config
+package com.alekseysamoylov.integration.messaging
 
 
 import org.springframework.amqp.core.BindingBuilder

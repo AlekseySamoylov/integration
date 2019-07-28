@@ -1,6 +1,5 @@
 package com.alekseysamoylov.integration.messaging
 
-import com.alekseysamoylov.integration.config.TOPIC_TO_EXCHANGE
 import org.springframework.amqp.rabbit.core.RabbitTemplate
 import org.springframework.stereotype.Component
 

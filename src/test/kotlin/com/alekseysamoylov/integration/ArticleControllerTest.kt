@@ -1,5 +1,10 @@
 package com.alekseysamoylov.integration
 
+import com.alekseysamoylov.integration.messaging.BroadcastMessageProducer
+import com.alekseysamoylov.integration.protobuf.CourseRepository
+import com.alekseysamoylov.integration.rest.Article
+import com.alekseysamoylov.integration.rest.ArticleRepository
+import com.alekseysamoylov.integration.rest.User
 import com.ninjasquad.springmockk.MockkBean
 import io.mockk.every
 import org.junit.jupiter.api.Test
@@ -16,6 +21,10 @@ class ArticleControllerTest(@Autowired val mockMvc: MockMvc) {
 
   @MockkBean
   private lateinit var articleRepository: ArticleRepository
+  @MockkBean
+  private lateinit var broadcastMessageProducer: BroadcastMessageProducer
+  @MockkBean
+  private lateinit var courseRepository: CourseRepository
 
   @Test
   fun `List articles`() {

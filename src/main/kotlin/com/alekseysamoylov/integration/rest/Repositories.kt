@@ -1,4 +1,4 @@
-package com.alekseysamoylov.integration
+package com.alekseysamoylov.integration.rest
 
 import org.springframework.data.repository.CrudRepository
 

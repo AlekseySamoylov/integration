@@ -1,10 +1,9 @@
-package com.alekseysamoylov.integration.config
+package com.alekseysamoylov.integration.protobuf
 
 import com.alekseysamoylov.integration.model.ProtobufTraining.Course
 import com.alekseysamoylov.integration.model.ProtobufTraining.Student
 import com.alekseysamoylov.integration.model.ProtobufTraining.Student.PhoneNumber
 import com.alekseysamoylov.integration.model.ProtobufTraining.Student.PhoneType
-import com.alekseysamoylov.integration.protobuf.CourseRepository
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.http.converter.protobuf.ProtobufHttpMessageConverter

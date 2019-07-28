@@ -1,4 +1,4 @@
-package com.alekseysamoylov.integration.config
+package com.alekseysamoylov.integration.swagger
 
 import com.alekseysamoylov.integration.controller.API_URI
 import org.springframework.context.annotation.Bean

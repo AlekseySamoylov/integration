@@ -1,5 +1,6 @@
-package com.alekseysamoylov.integration.controller
+package com.alekseysamoylov.integration.controller.protobuf
 
+import com.alekseysamoylov.integration.controller.API_URI
 import com.alekseysamoylov.integration.model.ProtobufTraining.Course
 import com.alekseysamoylov.integration.protobuf.CourseRepository
 import org.springframework.http.HttpStatus

@@ -1,6 +1,6 @@
 package com.alekseysamoylov.integration.controller
 
-import com.alekseysamoylov.integration.*
+import com.alekseysamoylov.integration.rest.*
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.ui.set

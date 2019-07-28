@@ -1,4 +1,4 @@
-package com.alekseysamoylov.integration
+package com.alekseysamoylov.integration.rest
 
 import java.time.LocalDateTime
 import javax.persistence.Entity

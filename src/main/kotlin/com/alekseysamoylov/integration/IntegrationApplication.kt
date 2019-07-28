@@ -1,5 +1,6 @@
 package com.alekseysamoylov.integration
 
+import com.alekseysamoylov.integration.rest.BlogProperties
 import org.springframework.boot.Banner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties
